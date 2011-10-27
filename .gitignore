@@ -1,0 +1,7 @@
+.settings/
+tmp/
+test-result/
+eclipse/
+.project
+.classpath
+

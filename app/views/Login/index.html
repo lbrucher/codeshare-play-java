@@ -1,0 +1,25 @@
+#{extends 'layout_main.html' /}
+
+<div id="login">
+	<div id="wrapper">
+		<form id="form" method='post' action='/interviewer/login'>
+			<div id='fields'>
+				<div id='username'>
+					<div>Username:</div>
+					<input id='iusername' type='text' name='username' />
+				</div>
+				<div id='password'>
+					<div>Password:</div>
+					<input type='password' name='password' />
+				</div>
+			</div>
+			<input id='submit' type='submit' value='Login' />
+			#{if error}
+				<div id='message'>Invalid username or password</div>
+			#{/if}
+		</form>
+	</div>
+</div>
+<script type='text/javascript'>
+	document.getElementById('iusername').focus();
+</script>

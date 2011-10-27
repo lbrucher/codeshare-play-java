@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Codeshare</title>
+        <meta charset="${_response_encoding}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/style.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <script src="@{'/public/javascripts/jquery-1.5.2.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{get 'moreScripts' /}
+    </head>
+    <body>
+		<div id="container">
+			<div id="header">
+				<ul>
+					#{if currentUser != null}
+						<li class="left">
+							<h1><a href='/interviewer') CodeShare - Interviewer</a></h1>
+						<li class="right signout">
+							<div class="divider">|</div>
+							<a id="logout" href='/interviewer/logout'> Sign Out </a>
+							<span style='padding-left:6px;'> (${currentUser.username}) </span>
+						#{if session != null}
+							<li class="right">
+								&nbsp;| Session ${session.id}
+								(<a href='/interviewer/session/${session.id}/close'> close </a>)
+						#{/if}
+						<li class="right">
+							<div class="divider">|</div>
+							#{if currentUser.username == 'admin'}
+								<a href='/user'> Users </a>
+							#{/if}
+							#{else}
+								<a href='/user'> Profile </a>
+							#{/else}
+					#{/if}
+					#{else}
+						<li class="left">
+							<h1><a href='/candidate'> CodeShare </a></h1>
+					#{/else}
+				</ul>
+			</div>
+
+			<div id="content">
+				#{doLayout /}
+			</div>
+		</div>
+    </body>
+</html>
