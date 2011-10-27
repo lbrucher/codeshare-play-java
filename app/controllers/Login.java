@@ -6,7 +6,7 @@ import play.mvc.Controller;
 
 public class Login extends Controller {
 
-	public static void index() {
+	public static void view() {
 
 		//TODO DEBUG
 		User user = User.find("byUsername", "admin").first();
@@ -15,6 +15,6 @@ public class Login extends Controller {
 		Logger.debug("Logged in as user "+user);
 		session.put("username", user.username);
 
-		Interviewer.index();
+		Interviewer.view();
 	}
 }

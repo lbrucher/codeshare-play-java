@@ -1,0 +1,87 @@
+#{extends 'layout_main.html' /}
+
+<div id="sessions" data-bind='template: "sessionsTemplate"'> </div>
+<script type="text/html" id="sessionsTemplate">
+	<div id='open'>
+		Open sessions (<a id='create' href='#' data-bind="click: function() { createSession() }">Create New</a>)
+	</div>
+	<table border='0' cellspacing='0' cellpadding='4'>
+        {{each(i, s) openSessions()}}
+            <tr>
+                <td>[<span data-bind='text: id' />]</td>
+				<td><span data-bind='text: formatDate(createdOn)' /></td>
+				<td>
+					<a href="#" data-bind="click: function() { sessionDetails(s) }">Details</a>
+					&nbsp;|
+					<a href="#" data-bind="click: function() { resumeSession(s) }">Resume</a>
+					&nbsp;|
+					<a href="#" data-bind="click: function() { closeSession(s) }">Close</a>
+					&nbsp;|
+					<a href="#" data-bind="click: function() { deleteSession(s) }">Delete</a>
+				</td>
+            </tr>
+        {{/each}}
+    </table>
+
+	<div id='closed'>Closed sessions</div>
+	<table border='0' cellspacing='0' cellpadding='4'>
+		{{each(i, s) closedSessions()}}
+			<tr>
+				<td>[<span data-bind='text: id' />]</td>
+				<td><span data-bind='text: formatDate(createdOn)' /></td>
+				<td>
+					<a href="#" data-bind="click: function() { sessionDetails(s) }">Details</a>
+					&nbsp;|
+					<a href="#" data-bind="click: function() { reopenSession(s) }">Reopen</a>
+					&nbsp;|
+					<a href="#" data-bind="click: function() { deleteSession(s) }">Delete</a>
+				</td>
+			</tr>
+		{{/each}}
+	</table>
+</script>
+
+<script type="text/javascript">
+function ViewModel() {
+
+	var self = this;
+
+	this.openSessions = ko.observableArray([]);
+	this.closedSessions = ko.observableArray([]);
+
+	this.formatDate = function(dt) {
+		return (dt.getYear()+1900)+'/'+(dt.getMonth()+1)+'/'+dt.getDate()+' '+dt.toLocaleTimeString();
+	};
+
+	this.createSession = function() {
+		backendServices.createSession( function(newSession) {
+			self.openSessions.push(newSession);
+		});
+	};
+
+	this.resumeSession = function(s) {
+		alert(s.id);
+	};
+
+	this.sessionDetails = function(s) {
+	};
+
+	this.reopenSession = function(s) {
+	};
+
+	this.closeSession = function(s) {
+	};
+
+	this.deleteSession = function(s) {
+	};
+
+
+	// Init view model
+	backendServices.initInterviewerMainView( function(openSessions, closedSessions) {
+		self.openSessions(openSessions);
+		self.closedSessions(closedSessions);
+	});
+};
+
+ko.applyBindings( new ViewModel() );
+</script>

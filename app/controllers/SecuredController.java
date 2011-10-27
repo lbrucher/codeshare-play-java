@@ -17,13 +17,13 @@ public class SecuredController extends Controller {
         String username = session.get("username");
 Logger.debug("username="+username);
         if (username == null)
-        	Login.index();
+        	Login.view();
 
         // Check user actually exists
         User currentUser = User.find("byUsername", username).first();
 Logger.debug("user="+currentUser);
         if (currentUser == null)
-        	Login.index();
+        	Login.view();
 
         // Store current user in context
         renderArgs.put("currentUser", currentUser);

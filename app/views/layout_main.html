@@ -3,13 +3,20 @@
     <head>
         <title>Codeshare</title>
         <meta charset="${_response_encoding}">
-        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/style.css'}">
+        #{stylesheet media:'screen', src:'style.css' /}
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
-        <script src="@{'/public/javascripts/jquery-1.5.2.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-		<script src="@{'/public/javascripts/jquery.tmpl.js'}" type="text/javascript" charset="${_response_encoding}"></script>
 
-		<script src="@{'/public/javascripts/knockout-1.2.1.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+		#{script src:'jquery-1.5.2.min.js', charset:'${_response_encoding}' /}
+		#{script src:'jquery.tmpl.js', charset:'${_response_encoding}' /}
+		#{script src:'knockout-1.2.1.js', charset:'${_response_encoding}' /}
+
+	#{if play.mode = 'DEV'}
+		#{script src:'backend-services-dev.js', charset:'${_response_encoding}' /}
+	#{/if}
+	#{else}
+		#{script src:'backend-services.js', charset:'${_response_encoding}' /}
+	#{/else}
 
 *{
         <script src="@{'/public/javascripts/json2.js'}" type="text/javascript" charset="${_response_encoding}"></script>
@@ -17,6 +24,10 @@
         <script src="@{'/public/javascripts/backbone.js'}" type="text/javascript" charset="${_response_encoding}"></script>
 }*
         #{get 'moreScripts' /}
+
+		<script type="text/javascript">
+			var backendServices = new BackendServices();
+		</script>
     </head>
     <body>
 		<div id="container">
@@ -51,6 +62,7 @@
 			</div>
 
 			<div id="content">
+				${play.mode}
 				#{doLayout /}
 			</div>
 		</div>

@@ -10,7 +10,7 @@ import models.*;
 
 public class Interviewer extends SecuredController {
 
-	public static void index() {
+	public static void view() {
         render();
     }
 }
