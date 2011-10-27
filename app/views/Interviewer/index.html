@@ -1,45 +1,80 @@
 #{extends 'layout_main.html' /}
 
-<div id='sessions'>
-
+<div id="sessions" data-bind='template: "sessionsTemplate"'> </div>
+<script type="text/html" id="sessionsTemplate">
 	<div id='open'>
-		Open sessions (<a id='create' href='/interviewer/createNew'>Create New</a>)
+		Open sessions (<a id='create' href='#' data-bind="click: function() { viewModel.createSession() }">Create New</a>)
 	</div>
 	<table border='0' cellspacing='0' cellpadding='4'>
-*{
-		- for(var s in openSessions)
-			tr
-				td [
-					span#sessionId #{openSessions[s].id}
-					span ]
-				td #{openSessions[s].createdOn.getYear()+1900}/#{openSessions[s].createdOn.getMonth()+1}/#{openSessions[s].createdOn.getDate()} #{openSessions[s].createdOn.toLocaleTimeString()}
-				td= openSessions[s].status
-				td
-					a(href='/interviewer/session/'+openSessions[s].id+'/details') Details
+        {{each(i, s) openSessions()}}
+            <tr>
+                <td>[<span data-bind='text: id' />]</td>
+				<td><span data-bind='text: formatDate(createdOn)' /></td>
+				<td>
+					<a href="#" data-bind="click: function() { viewModel.sessionDetails(s) }">Details</a>
 					&nbsp;|
-					a(href='/interviewer/session/'+openSessions[s].id) Resume
+					<a href="#" data-bind="click: function() { viewModel.resumeSession(s) }">Resume</a>
 					&nbsp;|
-					a(href='/interviewer/session/'+openSessions[s].id+'/close') Close
+					<a href="#" data-bind="click: function() { viewModel.closeSession(s) }">Close</a>
 					&nbsp;|
-					a(href='/interviewer/session/'+openSessions[s].id+'/delete') Delete
-}*
-	</table>
+					<a href="#" data-bind="click: function() { viewModel.deleteSession(s) }">Delete</a>
+				</td>
+            </tr>
+        {{/each}}
+    </table>
 
 	<div id='closed'>Closed sessions</div>
 	<table border='0' cellspacing='0' cellpadding='4'>
-*{
-		- for(var s in closedSessions)
-			tr
-				td [#{closedSessions[s].id}]
-				td #{closedSessions[s].createdOn.getYear()+1900}/#{closedSessions[s].createdOn.getMonth()+1}/#{closedSessions[s].createdOn.getDate()} #{closedSessions[s].createdOn.toLocaleTimeString()}
-				td= closedSessions[s].status
-				td
-					a(href='/interviewer/session/'+closedSessions[s].id+'/details') Details
+		{{each(i, s) closedSessions()}}
+			<tr>
+				<td>[<span data-bind='text: id' />]</td>
+				<td><span data-bind='text: formatDate(createdOn)' /></td>
+				<td>
+					<a href="#" data-bind="click: function() { viewModel.sessionDetails(s) }">Details</a>
 					&nbsp;|
-					a(href='/interviewer/session/'+closedSessions[s].id+'/reopen') Reopen
+					<a href="#" data-bind="click: function() { viewModel.reopenSession(s) }">Reopen</a>
 					&nbsp;|
-					a(href='/interviewer/session/'+closedSessions[s].id+'/delete') Delete
-}*
+					<a href="#" data-bind="click: function() { viewModel.deleteSession(s) }">Delete</a>
+				</td>
+			</tr>
+		{{/each}}
 	</table>
-	
-</div>
+</script>
+
+<script type="text/javascript">
+var viewModel = {
+	openSessions: new ko.observableArray([
+		{ id:5692, status:'open', createdOn:new Date(2011,10,01) },
+		{ id:4456, status:'open', createdOn:new Date(2011,10,03) }
+    ]),
+
+	closedSessions: new ko.observableArray([
+		{ id:1408, status:'closed', createdOn:new Date(2011,09,12,4,50,32) },
+    ]),
+
+	formatDate: function(dt) {
+		return (dt.getYear()+1900)+'/'+(dt.getMonth()+1)+'/'+dt.getDate()+' '+dt.toLocaleTimeString();
+	},
+
+	createSession: function() {
+	},
+
+	resumeSession: function(s) {
+		alert(s.id);
+	},
+
+	sessionDetails: function(s) {
+	},
+
+	reopenSession: function(s) {
+	},
+
+	closeSession: function(s) {
+	},
+
+	deleteSession: function(s) {
+	}
+};
+
+ko.applyBindings(viewModel);
+</script>
