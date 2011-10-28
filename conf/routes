@@ -3,7 +3,15 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.view
+GET     /                                   			   			Application.view
+
+GET		/interviewer/session/{<[0-9]+>id}/init						Interviewer.sessionInit
+GET		/interviewer/session/{<[0-9]+>id}/refreshOtherText			Interviewer.sessionRefreshOtherText
+POST	/interviewer/session/{<[0-9]+>id}/updateMyText				Interviewer.sessionUpdateMyText
+POST	/interviewer/session/{<[0-9]+>id}/updateMyComments			Interviewer.sessionUpdateMyComments
+
+
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

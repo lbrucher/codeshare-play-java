@@ -86,9 +86,9 @@ TextareaTracker.prototype.onTextChanged = function(newText)
 function Codeshare(_sessionId, _elMyText, _elOtherText, _elCommentsText)
 {
 	this.sessionId = _sessionId;
-	this.backendServices = null;
+	this.baseUrl = null;
 
-	this.lastOtherUpdateTime = null;
+//	this.lastOtherUpdateTime = null;
 
 	var self = this;
 	this.myTextTracker = new TextareaTracker(_elMyText, function(text) {self.updateMyText(text);});
@@ -97,13 +97,26 @@ function Codeshare(_sessionId, _elMyText, _elOtherText, _elCommentsText)
 	this.myCommentsTracker = _elCommentsText ? new TextareaTracker(_elCommentsText, function(text) {self.updateMyComments(text)}) : null;
 
 	this.log = function(msg) { console.log(msg); };
+
+
+	this.uriInitSession      = '/init';
+//	this.uriSessionClosed    = '/closed';
+	this.uriRefreshOtherText = '/refreshOtherText';
+	this.uriUpdateMyText     = '/updateMyText';
+	this.uriUpdateMyComments = '/updateMyComments';
 }
 
-Codeshare.prototype.start = function(_backendServices)
+Codeshare.prototype.start = function(_baseUrl)
 {
-	this.backendServices = _backendServices;
+	this.baseUrl = _baseUrl;
+	this.baseSessionUrl = _baseUrl;
+	if (_baseUrl.length > 0 && _baseUrl.charAt(_baseUrl.length-1) != '/')
+		this.baseSessionUrl += '/';
+	this.baseSessionUrl += this.sessionId;
+
 
 	var self = this;
+/*
 	this.backendServices.initSession(this.sessionId, function(success,myText,otherText,lastOtherUpdateTime,commentsText) {
 		if (success) {
 			self.myTextTracker.setText(myText);
@@ -114,11 +127,35 @@ Codeshare.prototype.start = function(_backendServices)
 			if (self.myCommentsTracker)
 				self.myCommentsTracker.setText(commentsText);
 		}
-		else
+		else {
 			self.log("initSession failed!");
+			window.location.href = _baseUrl;
+		}
 
 		self.setOtherUpdater();
 	});
+*/
+
+	$.get(this.baseSessionUrl + this.uriInitSession,
+		  { }
+		, function(data, status) {
+			if (status == 'success') {
+				self.myTextTracker.setText(data.myText);
+
+				self.elOtherText.value = data.otherText;
+//				self.lastOtherUpdateTime = lastOtherUpdateTime;
+
+				if (self.myCommentsTracker)
+					self.myCommentsTracker.setText(data.commentsText);
+			}
+			else {
+				self.log("initSession failed!");
+				window.location.href = self.baseUrl;
+			}
+		  }
+		, "json"
+	);
+
 }
 
 Codeshare.prototype.stop = function()
@@ -144,13 +181,13 @@ Codeshare.prototype.updateOtherText = function(sessionOpen,lastOtherUpdateTime,o
 {
 	if (!sessionOpen)
 	{
-		window.location.href = this.urlSessionClosed;
+		window.location.href = this.baseUrl;
 		return;
 	}
 
 	if (otherText != null)
 	{
-		this.lastOtherUpdateTime = lastOtherUpdateTime;
+//		this.lastOtherUpdateTime = lastOtherUpdateTime;
 		this.elOtherText.value = otherText;
 	}
 }
@@ -161,7 +198,7 @@ Codeshare.prototype.refreshOtherText = function()
 	{
 		this.log("Requesting other text update...");
 		var self = this;
-
+/*
 		this.backendServices.refreshOtherText(this.sessionId, this.lastOtherUpdateTime,
 			function(success, sessionOpen,lastOtherUpdateTime,otherText) {
 				if (success)
@@ -170,21 +207,21 @@ Codeshare.prototype.refreshOtherText = function()
 					self.log("UpdateOtherText failed");
 				self.setOtherUpdater();
 		});
-/*
-		var ts = new Date().getTime();
+*/
 
-		$.get(this.urlRefreshOtherText+'/'+self.lastOtherUpdateTime,
-			  { ts:ts }
+//		var ts = new Date().getTime();
+
+		$.get(this.baseSessionUrl + this.uriRefreshOtherText,
+			  { }
 			, function(data, status) {
 				if (status == 'success')
-					self.updateOtherText(data);
+					self.updateOtherText(data.sessionOpen, null, data.otherText);
 				else
 					self.log("UpdateOtherText: status:["+status+"]");
 				self.setOtherUpdater();
 			  }
 			, "json"
 		);
-*/
 
 	}
 	catch(e)
@@ -202,7 +239,7 @@ Codeshare.prototype.updateMyText = function(newText)
 	{
 		this.log("Sending updated my text...");
 		var self = this;
-
+/*
 		this.backendServices.updateMyText(this.sessionId, newText, this.lastOtherUpdateTime,
 			function(success, sessionOpen,lastOtherUpdateTime,otherText) {
 				if (success)
@@ -211,23 +248,22 @@ Codeshare.prototype.updateMyText = function(newText)
 					self.log("UpdateMyText failed");
 				self.setOtherUpdater();
 		});
+*/
 
-/*
-		$.post(this.urlUpdateMyText,
+		$.post(this.baseSessionUrl + this.uriUpdateMyText,
 			{
-				myText:newText,
-				lastOtherUpdateTime:self.lastOtherUpdateTime
+				myText:newText /*,
+				lastOtherUpdateTime:self.lastOtherUpdateTime */
 			},
 			function(data, status) {
 				if (status == 'success')
-					self.updateOtherText(data);
+					self.updateOtherText(data.sessionOpen, null, data.otherText);
 				else
 					self.log("UpdateMyText: status:["+status+"]");
 				self.setOtherUpdater();
 			},
 			"json"
 		);
-*/
 	}
 	catch(e)
 	{
@@ -242,14 +278,14 @@ Codeshare.prototype.updateMyComments = function(newText)
 	{
 		this.log("Sending updated comments...");
 		var self = this;
-
+/*
 		this.backendServices.updateMyComments(this.sessionId, newText, function(success) {
 			if (!success)
 				self.log("UpdateMyComments failed");
 		});
+*/
 
-/*
-		$.post(this.urlUpdateMyComments,
+		$.post(this.baseUrl + this.uriUpdateMyComments,
 			{
 				myComments:newText
 			},
@@ -259,7 +295,6 @@ Codeshare.prototype.updateMyComments = function(newText)
 			},
 			"json"
 		);
-*/
 	}
 	catch(e)
 	{
@@ -273,5 +308,3 @@ Codeshare.prototype.setMyText = function(newText)
 {
 	this.myTextTracker.setText(newText);
 }
-
-

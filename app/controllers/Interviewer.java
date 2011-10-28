@@ -1,12 +1,6 @@
 package controllers;
 
-import play.*;
-import play.mvc.*;
-import utils.AppFixtures;
-
-import java.util.*;
-
-import models.*;
+import play.Logger;
 
 public class Interviewer extends SecuredController {
 
@@ -20,5 +14,10 @@ public class Interviewer extends SecuredController {
 
 		renderArgs.put("sessionId", id);
 		render();
+	}
+
+
+	public static void sessionInit(int id) {
+		Logger.debug("YIHEE:"+id);
 	}
 }
