@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4a4ffb70-eda6-4642-86c5-9e51ff3ac1dd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Interviewer.java" afterPath="$PROJECT_DIR$/app/controllers/Interviewer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Interviewer/viewSession.html" afterPath="$PROJECT_DIR$/app/views/Interviewer/viewSession.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/cs-session.js" afterPath="$PROJECT_DIR$/public/javascripts/cs-session.js" />
     </list>
     <ignored path="playj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,7 +78,7 @@
       <file leaf-file-name="Interviewer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Interviewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="44" selection-start="322" selection-end="322" vertical-scroll-proportion="0.33506224">
+            <state line="10" column="44" selection-start="192" selection-end="192" vertical-scroll-proportion="0.17634855">
               <folding />
             </state>
           </provider>
@@ -544,6 +540,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32839224" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3295325" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19252874" sideWeight="0.2177879" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -582,7 +579,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="session: use straight ajax calls iso client-side facade" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -595,6 +592,7 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="session: use straight ajax calls iso client-side facade" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -711,7 +709,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Interviewer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="44" selection-start="322" selection-end="322" vertical-scroll-proportion="0.33506224">
+        <state line="10" column="44" selection-start="192" selection-end="192" vertical-scroll-proportion="0.17634855">
           <folding />
         </state>
       </provider>
