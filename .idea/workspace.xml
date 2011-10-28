@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a4ffb70-eda6-4642-86c5-9e51ff3ac1dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/Interviewer/view.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/Interviewer/index.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/Application/index.html" afterPath="$PROJECT_DIR$/app/views/Application/view.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/Login/index.html" afterPath="$PROJECT_DIR$/app/views/Login/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Application.java" afterPath="$PROJECT_DIR$/app/controllers/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Interviewer.java" afterPath="$PROJECT_DIR$/app/controllers/Interviewer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Login.java" afterPath="$PROJECT_DIR$/app/controllers/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/SecuredController.java" afterPath="$PROJECT_DIR$/app/controllers/SecuredController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Interviewer/view.html" afterPath="$PROJECT_DIR$/app/views/Interviewer/view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout_main.html" afterPath="$PROJECT_DIR$/app/views/layout_main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/backend-services-dev.js" afterPath="$PROJECT_DIR$/public/javascripts/backend-services-dev.js" />
     </list>
     <ignored path="playj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,7 +72,7 @@
       <file leaf-file-name="layout_main.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layout_main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="2" selection-start="710" selection-end="710" vertical-scroll-proportion="-11.769231">
+            <state line="26" column="0" selection-start="1020" selection-end="1020" vertical-scroll-proportion="-17.0">
               <folding />
             </state>
           </provider>
@@ -94,19 +87,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="backend-services-dev.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="backend-services-dev.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/backend-services-dev.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
+            <state line="51" column="0" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.7329127">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/Interviewer/view.html">
+      <file leaf-file-name="Interviewer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Interviewer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.310219">
+            <state line="24" column="0" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewSession.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/Interviewer/viewSession.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="-5.8846154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="session.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/shared/session.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="-1.3076923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cs-session.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/cs-session.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="0" selection-start="2166" selection-end="2166" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,16 +146,19 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/Interviewer.java" />
         <option value="$PROJECT_DIR$/app/controllers/Login.java" />
         <option value="$PROJECT_DIR$/app/controllers/SecuredController.java" />
         <option value="$PROJECT_DIR$/app/controllers/Application.java" />
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/app/views/Interviewer/index.html" />
         <option value="$PROJECT_DIR$/public/javascripts/backend-services.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/backend-services-dev.js" />
-        <option value="$PROJECT_DIR$/app/views/layout_main.html" />
+        <option value="$PROJECT_DIR$/app/controllers/Interviewer.java" />
         <option value="$PROJECT_DIR$/app/views/Interviewer/view.html" />
+        <option value="$PROJECT_DIR$/app/views/layout_main.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/backend-services-dev.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/cs-session.js" />
+        <option value="$PROJECT_DIR$/app/views/shared/session.html" />
+        <option value="$PROJECT_DIR$/app/views/Interviewer/viewSession.html" />
       </list>
     </option>
   </component>
@@ -269,6 +292,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -363,6 +408,7 @@
     <property name="options.lastSelected" value="preferences.keymap" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -502,24 +548,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="165" width="1441" height="971" extended-state="0" />
+    <frame x="70" y="80" width="1441" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32839224" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="83" y="415" width="1392" height="288" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3295325" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24939074" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19252874" sideWeight="0.2177879" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967507" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16163793" sideWeight="0.6704675" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32839224" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3295325" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19252874" sideWeight="0.2177879" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967507" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16163793" sideWeight="0.7196896" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -578,13 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Interviewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="200" selection-end="200" vertical-scroll-proportion="0.12028302">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="357" selection-end="357" vertical-scroll-proportion="0.3207547">
@@ -620,23 +659,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/backend-services-dev.js">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Interviewer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layout_main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="2" selection-start="710" selection-end="710" vertical-scroll-proportion="-11.769231">
+        <state line="24" column="0" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Interviewer/view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.310219">
+        <state line="47" column="0" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.4074074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layout_main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="1020" selection-end="1020" vertical-scroll-proportion="-17.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/cs-session.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="0" selection-start="2166" selection-end="2166" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/session.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="-1.3076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Interviewer/viewSession.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="-5.8846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/backend-services-dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1665" selection-end="1665" vertical-scroll-proportion="0.7329127">
           <folding />
         </state>
       </provider>

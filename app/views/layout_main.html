@@ -2,20 +2,20 @@
 <html>
     <head>
         <title>Codeshare</title>
-        <meta charset="${_response_encoding}">
+        <meta charset="utf-8">
         #{stylesheet media:'screen', src:'style.css' /}
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
 
-		#{script src:'jquery-1.5.2.min.js', charset:'${_response_encoding}' /}
-		#{script src:'jquery.tmpl.js', charset:'${_response_encoding}' /}
-		#{script src:'knockout-1.2.1.js', charset:'${_response_encoding}' /}
+		#{script src:'jquery-1.5.2.min.js', charset:'utf-8' /}
+		#{script src:'jquery.tmpl.js', charset:'utf-8' /}
+		#{script src:'knockout-1.2.1.js', charset:'utf-8' /}
 
 	#{if play.mode = 'DEV'}
-		#{script src:'backend-services-dev.js', charset:'${_response_encoding}' /}
+		#{script src:'backend-services-dev.js', charset:'utf-8' /}
 	#{/if}
 	#{else}
-		#{script src:'backend-services.js', charset:'${_response_encoding}' /}
+		#{script src:'backend-services.js', charset:'utf-8' /}
 	#{/else}
 
 *{
@@ -40,10 +40,10 @@
 							<div class="divider">|</div>
 							<a id="logout" href='/interviewer/logout'> Sign Out </a>
 							<span style='padding-left:6px;'> (${currentUser.username}) </span>
-						#{if session != null}
+						#{if currentSession != null}
 							<li class="right">
-								&nbsp;| Session ${session.id}
-								(<a href='/interviewer/session/${session.id}/close'> close </a>)
+								&nbsp;| Session ${currentSession.id}
+								(<a href='/interviewer/session/${currentSession.id}/close'> close </a>)
 						#{/if}
 						<li class="right">
 							<div class="divider">|</div>
@@ -62,7 +62,6 @@
 			</div>
 
 			<div id="content">
-				${play.mode}
 				#{doLayout /}
 			</div>
 		</div>

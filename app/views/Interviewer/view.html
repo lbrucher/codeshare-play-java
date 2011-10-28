@@ -60,7 +60,7 @@ function ViewModel() {
 	};
 
 	this.resumeSession = function(s) {
-		alert(s.id);
+		window.location = 'interviewer/viewSession?id='+s.id;
 	};
 
 	this.sessionDetails = function(s) {

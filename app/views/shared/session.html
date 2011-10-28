@@ -1,0 +1,32 @@
+*{ Expected context:
+		isCandidate
+		sessionId
+}*
+
+<div class='session'>
+	<table border='0' width='100%'>
+		<tr valign='top'>
+			<td width='50%'>
+				<div>${myScreenLabel}</div>
+				<div id='myScreenContent'>
+					<textarea id='myText' class='lined' rows='20'></textarea>
+				</div>
+			#{if !isCandidate}
+				<div>Interview comments:</div>
+				<textarea id='myComments' rows='10'></textarea>
+			#{/if}
+			</td>
+			<td width='50%'>
+				<div>${otherScreenLabel}</div>
+				<div id='otherScreenContent'>
+					<textarea id='otherText' rows='20' readonly='readonly'></textarea>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<script type="text/javascript">
+	var codeshare = new Codeshare(${sessionId}, document.getElementById('myText'), document.getElementById('otherText'), document.getElementById('myComments'));
+</script>
+
