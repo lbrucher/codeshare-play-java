@@ -1,6 +1,11 @@
 package controllers;
 
-import play.Logger;
+import models.InterviewSession;
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections.Transformer;
+import utils.json.InterviewSession1;
+
+import java.util.Date;
 
 public class Interviewer extends SecuredController {
 
@@ -40,9 +45,11 @@ public class Interviewer extends SecuredController {
 
 		renderJSON(results);
 */
-		renderJSON( CollectionUtils.collect(InterviewSession.findAll(), new Transformer() {
-			public Object transform(Object o) { return new InterviewSession1((InterviewSession)o); }
-		}) );
+		renderJSON(CollectionUtils.collect(InterviewSession.findAll(), new Transformer() {
+			public Object transform(Object o) {
+				return new InterviewSession1((InterviewSession) o);
+			}
+		}));
 	}
 
 
