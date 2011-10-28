@@ -1,0 +1,22 @@
+# you describe your data using the YAML notation here
+# and then load them using Fixtures.load("data.yml")
+
+InterviewSession(4321):
+  code: 4321
+  creationDate: '2011-10-01'
+  isOpen: true
+  interviewerText: ''
+  candidateText: ''
+  interviewerComments: ''
+  interviewerSeenLastCandidateText: false
+  candidateSeenLastInterviewerText: false
+
+InterviewSession(1308):
+  code: 1308
+  creationDate: '2011-09-23'
+  isOpen: false
+  interviewerText: 'some int text'
+  candidateText: 'some candidate test'
+  interviewerComments: 'int comments'
+  interviewerSeenLastCandidateText: false
+  candidateSeenLastInterviewerText: false

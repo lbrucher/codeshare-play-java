@@ -13,6 +13,13 @@ POST	/interviewer/session/{<[0-9]+>id}/updateMyComments			Interviewer.sessionUpd
 
 
 
+GET		/interviewer/session/list				Interviewer.sessionList
+POST	/interviewer/session/create				Interviewer.sessionCreate
+
+
+
+#GET		/interviewer/test9.json					Interviewer.test3
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
