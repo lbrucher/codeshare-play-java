@@ -2,6 +2,7 @@
 tmp/
 test-result/
 eclipse/
+out/
 .project
 .classpath
 
