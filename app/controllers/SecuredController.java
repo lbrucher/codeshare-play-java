@@ -15,13 +15,19 @@ public class SecuredController extends Controller {
 	{
 		// Get current username
         String username = session.get("username");
-Logger.debug("username="+username);
-        if (username == null)
-        	Login.index();
+//Logger.debug("username="+username);
+        if (username == null) {
+			if (Play.mode == Play.Mode.DEV) {
+				username = "admin";
+				session.put("username", username);
+			} else {
+				Login.index();
+			}
+		}
 
         // Check user actually exists
         User currentUser = User.find("byUsername", username).first();
-Logger.debug("user="+currentUser);
+//Logger.debug("user="+currentUser);
         if (currentUser == null)
         	Login.index();
 
