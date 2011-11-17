@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a4ffb70-eda6-4642-86c5-9e51ff3ac1dd" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/Application/view.html" afterPath="$PROJECT_DIR$/app/views/Application/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/Interviewer/view.html" afterPath="$PROJECT_DIR$/app/views/Interviewer/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/Interviewer/viewSession.html" afterPath="$PROJECT_DIR$/app/views/Interviewer/session.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/ApplicationTest.java" afterPath="$PROJECT_DIR$/test/functional/ApplicationTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/functional/Interviewer.java" afterPath="$PROJECT_DIR$/test/functional/InterviewerTest.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/Login.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/SecuredController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/Login/view.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Application.java" afterPath="$PROJECT_DIR$/app/controllers/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Interviewer.java" afterPath="$PROJECT_DIR$/app/controllers/Interviewer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Login.java" afterPath="$PROJECT_DIR$/app/controllers/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/SecuredController.java" afterPath="$PROJECT_DIR$/app/controllers/SecuredController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/Bootstrap.java" afterPath="$PROJECT_DIR$/app/utils/Bootstrap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/application.conf" afterPath="$PROJECT_DIR$/conf/application.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/dependencies.yml" afterPath="$PROJECT_DIR$/conf/dependencies.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/initial-users.yml" afterPath="$PROJECT_DIR$/conf/initial-users.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playj.iml" afterPath="$PROJECT_DIR$/playj.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test-data.yml" afterPath="$PROJECT_DIR$/test/test-data.yml" />
     </list>
     <ignored path="playj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,7 +68,17 @@
     <favorites_list name="playj" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="routes" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/conf/routes">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="0" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.68775934">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -349,32 +346,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="playj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="playj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="playj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -721,13 +692,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test-data.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="30" selection-start="454" selection-end="454" vertical-scroll-proportion="0.30614406">
@@ -759,13 +723,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/Interviewer/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="0" selection-start="1979" selection-end="1979" vertical-scroll-proportion="0.638674">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/SecuredController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="334" selection-end="334" vertical-scroll-proportion="0.21610169">
           <folding />
         </state>
       </provider>
@@ -814,6 +771,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/conf/application.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="181" column="6" selection-start="5459" selection-end="5459" vertical-scroll-proportion="0.17770767">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Security.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="18" selection-start="40" selection-end="40" vertical-scroll-proportion="0.03526971">
@@ -823,14 +787,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="237" selection-end="237" vertical-scroll-proportion="0.17634855">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/application.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="6" selection-start="5459" selection-end="5459" vertical-scroll-proportion="0.17770767">
+        <state line="39" column="0" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.68775934">
           <folding />
         </state>
       </provider>
