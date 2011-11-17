@@ -54,13 +54,22 @@ function ViewModel() {
 	};
 
 	this.createSession = function() {
-		backendServices.createSession( function(newSession) {
-			self.openSessions.push(newSession);
-		});
+		$.post('@{Interviewer.createSession()}',
+			  { }
+			, function(data, status) {
+				if (status == 'success') {
+					self.openSessions.push(data);
+				}
+				else {
+					console.log("Could not create new session!");
+				}
+			  }
+			, "json"
+		);
 	};
 
 	this.resumeSession = function(s) {
-		window.location = 'interviewer/session?id='+s.id;
+		window.location = 'interviewer/'+s.code;
 	};
 
 	this.sessionDetails = function(s) {
@@ -77,10 +86,19 @@ function ViewModel() {
 
 
 	// Init view model
-	backendServices.initInterviewerMainView( function(openSessions, closedSessions) {
-		self.openSessions(openSessions);
-		self.closedSessions(closedSessions);
-	});
+	$.get('@{Interviewer.listSessions()}',
+		function(data, status) {
+			if (status == 'success') {
+	alert(data);
+				self.openSessions(data.openSessions);
+				self.closedSessions(data.closedSessions);
+			}
+			else {
+				console.log("Failed retrieving list of all sessions!");
+			}
+		  }
+		, "json"
+	);
 };
 
 ko.applyBindings( new ViewModel() );

@@ -3,6 +3,7 @@ package models;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import java.util.Date;
 
 
@@ -17,6 +18,9 @@ public class InterviewSession extends Model {
 	public boolean interviewerSeenLastCandidateText;
 	public String candidateText;
 	public boolean candidateSeenLastInterviewerText;
+
+	@ManyToOne(optional=false)
+	public User user;
 
 	public String toString() {
 		return "<"+code+":"+(isOpen?"open":"closed")+">";

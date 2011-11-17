@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a4ffb70-eda6-4642-86c5-9e51ff3ac1dd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/Login.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/SecuredController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/Login/view.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/backend-services-dev.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/backend-services.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/Interviewer/session.html" afterPath="$PROJECT_DIR$/app/views/Interviewer/resumeSession.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Interviewer.java" afterPath="$PROJECT_DIR$/app/controllers/Interviewer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/InterviewSession.java" afterPath="$PROJECT_DIR$/app/models/InterviewSession.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Interviewer/index.html" afterPath="$PROJECT_DIR$/app/views/Interviewer/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout_main.html" afterPath="$PROJECT_DIR$/app/views/layout_main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/cs-session.js" afterPath="$PROJECT_DIR$/public/javascripts/cs-session.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/InterviewerTest.java" afterPath="$PROJECT_DIR$/test/functional/InterviewerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test-data.yml" afterPath="$PROJECT_DIR$/test/test-data.yml" />
     </list>
     <ignored path="playj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,17 +76,7 @@
     <favorites_list name="playj" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="routes" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/conf/routes">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="0" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.68775934">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -92,22 +90,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/javascripts/backend-services-dev.js" />
-        <option value="$PROJECT_DIR$/app/views/shared/session.html" />
-        <option value="$PROJECT_DIR$/public/javascripts/cs-session.js" />
-        <option value="$PROJECT_DIR$/app/views/Interviewer/viewSession.html" />
-        <option value="$PROJECT_DIR$/app/controllers/Login.java" />
-        <option value="$PROJECT_DIR$/app/controllers/SecuredController.java" />
-        <option value="$PROJECT_DIR$/conf/dependencies.yml" />
-        <option value="$PROJECT_DIR$/app/views/Application/index.html" />
-        <option value="$PROJECT_DIR$/app/views/Interviewer/index.html" />
-        <option value="$PROJECT_DIR$/test/functional/LoginTest.java" />
-        <option value="$PROJECT_DIR$/app/utils/Bootstrap.java" />
-        <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/conf/application.conf" />
         <option value="$PROJECT_DIR$/app/controllers/Security.java" />
-        <option value="$PROJECT_DIR$/app/controllers/Interviewer.java" />
         <option value="$PROJECT_DIR$/test/functional/SecurityTest.java" />
+        <option value="$PROJECT_DIR$/public/javascripts/cs-session.js" />
+        <option value="$PROJECT_DIR$/app/models/InterviewSession.java" />
+        <option value="$PROJECT_DIR$/test/test-data.yml" />
+        <option value="$PROJECT_DIR$/app/views/layout_main.html" />
+        <option value="$PROJECT_DIR$/app/views/Interviewer/resumeSession.html" />
+        <option value="$PROJECT_DIR$/app/views/Interviewer/index.html" />
+        <option value="$PROJECT_DIR$/app/utils/json/InterviewSessions1Transformer.java" />
+        <option value="$PROJECT_DIR$/app/utils/json/OpenSessionPredicate.java" />
+        <option value="$PROJECT_DIR$/test/unit/InterviewSessions1TransformerTest.java" />
+        <option value="$PROJECT_DIR$/app/utils/json/InterviewSessions.java" />
+        <option value="$PROJECT_DIR$/app/controllers/Interviewer.java" />
+        <option value="$PROJECT_DIR$/conf/routes" />
+        <option value="$PROJECT_DIR$/test/functional/InterviewerTest.java" />
       </list>
     </option>
   </component>
@@ -258,6 +256,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="unit" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -441,6 +461,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="json" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -476,6 +522,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.lastSelected" value="preferences.keymap" />
@@ -630,16 +677,16 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24939074" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19252874" sideWeight="0.2177879" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967507" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3297414" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32839224" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32839224" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -692,102 +739,124 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/Interviewer/resumeSession.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="362" selection-end="362" vertical-scroll-proportion="0.25925925">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/test-data.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="454" selection-end="454" vertical-scroll-proportion="0.30614406">
+        <state line="4" column="12" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/initial-users.yml">
+    <entry file="file://$PROJECT_DIR$/app/models/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0720339">
+        <state line="21" column="0" selection-start="493" selection-end="493" vertical-scroll-proportion="0.34216103">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/dependencies.yml">
+    <entry file="file:///usr/share/java/play-1.2.3/framework/src/play/db/jpa/GenericModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0720339">
+        <state line="345" column="27" selection-start="13514" selection-end="13514" vertical-scroll-proportion="0.51557463">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
+    <entry file="file://$PROJECT_DIR$/app/utils/json/InterviewSession1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="332" selection-end="332" vertical-scroll-proportion="0.14814815">
+        <state line="11" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.16558442">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Interviewer/index.html">
+    <entry file="file://$PROJECT_DIR$/test/UserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="1979" selection-end="1979" vertical-scroll-proportion="0.638674">
+        <state line="10" column="0" selection-start="78" selection-end="224" vertical-scroll-proportion="0.12878788">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/functional/SecurityTest.java">
+    <entry file="file://$PROJECT_DIR$/app/utils/json/OpenSessionPredicate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="0.21610169">
+        <state line="5" column="33" selection-start="116" selection-end="136" vertical-scroll-proportion="0.09199134">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/unit/InterviewSessions1TransformerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.39618644">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/InterviewSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="8" selection-start="299" selection-end="299" vertical-scroll-proportion="0.21610169">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/functional/InterviewerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="10" selection-start="393" selection-end="393" vertical-scroll-proportion="0.10955961">
+        <state line="88" column="0" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.23737916">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Interviewer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="310" selection-end="310" vertical-scroll-proportion="0.16088328">
+        <state line="72" column="0" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.67132115">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/json/InterviewSessions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="340" selection-end="340" vertical-scroll-proportion="0.1939834">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/json/InterviewSessions1Transformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="42" selection-start="118" selection-end="147" vertical-scroll-proportion="0.088174276">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/cs-session.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="0" selection-start="3921" selection-end="4391" vertical-scroll-proportion="0.7329127">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/utils/Bootstrap.java">
+    <entry file="file://$PROJECT_DIR$/app/views/Interviewer/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="288" selection-end="443" vertical-scroll-proportion="0.3174274">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/share/java/play-1.2.3/modules/secure/app/views/Secure/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/share/java/play-1.2.3/modules/secure/app/controllers/Secure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="5" selection-start="822" selection-end="822" vertical-scroll-proportion="0.39327025">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/application.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="6" selection-start="5459" selection-end="5459" vertical-scroll-proportion="0.17770767">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Security.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="40" selection-end="40" vertical-scroll-proportion="0.03526971">
+        <state line="93" column="0" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.6691892">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.68775934">
+        <state line="23" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.40560165">
           <folding />
         </state>
       </provider>

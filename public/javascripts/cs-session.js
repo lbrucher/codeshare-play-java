@@ -106,6 +106,11 @@ function Codeshare(_sessionId, _elMyText, _elOtherText, _elCommentsText)
 	this.uriUpdateMyComments = '/updateMyComments';
 }
 
+Codeshare.prototype.log = function(msg)
+{
+	console.log(msg);
+}
+
 Codeshare.prototype.start = function(_baseUrl)
 {
 	this.baseUrl = _baseUrl;
@@ -113,7 +118,6 @@ Codeshare.prototype.start = function(_baseUrl)
 	if (_baseUrl.length > 0 && _baseUrl.charAt(_baseUrl.length-1) != '/')
 		this.baseSessionUrl += '/';
 	this.baseSessionUrl += this.sessionId;
-
 
 	var self = this;
 /*

@@ -1,8 +1,20 @@
 # you describe your data using the YAML notation here
 # and then load them using Fixtures.load("data.yml")
 
-InterviewSession(4321):
-  code: 4321
+User(admin):
+  username: 'admin'
+  password: 'admin'
+  fullname: 'Admin User'
+
+User(joe):
+  username: 'joe'
+  password: 'joe'
+  fullname: 'Joe Smith'
+
+
+# === ADMIN sessions
+InterviewSession(1100):
+  code: 1100
   creationDate: '2011-10-01'
   isOpen: true
   interviewerText: ''
@@ -10,9 +22,10 @@ InterviewSession(4321):
   interviewerComments: ''
   interviewerSeenLastCandidateText: false
   candidateSeenLastInterviewerText: false
+  user: admin
 
-InterviewSession(1308):
-  code: 1308
+InterviewSession(1156):
+  code: 1156
   creationDate: '2011-09-23'
   isOpen: false
   interviewerText: 'some int text'
@@ -20,3 +33,17 @@ InterviewSession(1308):
   interviewerComments: 'int comments'
   interviewerSeenLastCandidateText: false
   candidateSeenLastInterviewerText: false
+  user: admin
+
+
+# === JOE sessions
+InterviewSession(2000):
+  code: 2000
+  creationDate: '2011-10-11'
+  isOpen: true
+  interviewerText: 'xxx'
+  candidateText: 'yyy'
+  interviewerComments: 'ccc'
+  interviewerSeenLastCandidateText: false
+  candidateSeenLastInterviewerText: false
+  user: joe
