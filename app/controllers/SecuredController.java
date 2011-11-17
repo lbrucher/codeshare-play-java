@@ -15,21 +15,22 @@ public class SecuredController extends Controller {
 	{
 		// Get current username
         String username = session.get("username");
-//Logger.debug("username="+username);
         if (username == null) {
-			if (Play.mode == Play.Mode.DEV) {
+
+			//TODO DEV -- auto login as admin...
+			if (Play.mode.isDev()) {
 				username = "admin";
 				session.put("username", username);
 			} else {
-        	Login.view();
+	        	Login.index();
+				return;
 			}
 		}
 
         // Check user actually exists
         User currentUser = User.find("byUsername", username).first();
-//Logger.debug("user="+currentUser);
         if (currentUser == null)
-        	Login.view();
+        	Login.index();
 
         // Store current user in context
         renderArgs.put("currentUser", currentUser);

@@ -1,27 +1,25 @@
 package functional;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.collections.Predicate;
-import org.hibernate.type.ListType;
-import org.junit.Before;
-import org.junit.Test;
-import play.Logger;
-import play.mvc.Http;
-import play.test.FunctionalTest;
-import utils.json.InterviewSession1;
-
 import java.util.Arrays;
 import java.util.List;
 
+import com.google.gson.Gson;
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.collections.Predicate;
+import org.junit.Before;
+import org.junit.Test;
+import play.mvc.Http;
+import play.test.*;
+import utils.json.InterviewSession1;
 
-public class Interviewer extends FunctionalTest {
+public class InterviewerTest extends FunctionalTest {
 
 	private Gson gson;
 
 	@Before
 	public void setUp() {
+		Fixtures.deleteAll();
+		Fixtures.loadModels("test-data.yml");		
 		gson = new Gson();
 	}
 

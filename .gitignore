@@ -3,6 +3,8 @@ tmp/
 test-result/
 eclipse/
 out/
+logs/
+modules/
 .project
 .classpath
 

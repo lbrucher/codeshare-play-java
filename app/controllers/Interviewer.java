@@ -3,25 +3,52 @@ package controllers;
 import models.InterviewSession;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.Transformer;
+import play.Logger;
+import play.Play;
+import play.mvc.Before;
+import play.mvc.Controller;
+import play.mvc.With;
 import utils.json.InterviewSession1;
 
 import java.util.Date;
 
-public class Interviewer extends SecuredController {
+@With(Secure.class)
+public class Interviewer extends Controller {
 
 	private static int codeGen = 1;
 
-	public static void view() {
+	@Before(priority=0)
+	static void autoLoginUsersInDevMode()
+	{
+		if (Play.mode.isDev()) {
+			if (!Security.isConnected()) {
+				Logger.debug("Auto login 'admin'");
+				session.put("username", "admin");
+			}
+		}
+	}
+
+//	@Before
+//	static void populateRenderArgs()
+//	{
+//		// Store current user in context
+////		renderArgs.put("currentUser", currentUser);
+//	}
+
+	public static void index() {
         render();
     }
 
-	public static void viewSession(int id) {
+
+	public static void session(int id) {
 		// verify session id
 		//TODO...
 
 		renderArgs.put("sessionId", id);
 		render();
 	}
+
+
 
 
 	/**

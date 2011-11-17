@@ -2,23 +2,29 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Home page
-GET     /                                   			   			Application.view
+# Import Secure routes
+*      /                module:secure
 
+# Home page
+GET     /                                   			   			Application.index
+
+
+# Interviewer
 GET		/interviewer/session/{<[0-9]+>id}/init						Interviewer.sessionInit
 GET		/interviewer/session/{<[0-9]+>id}/refreshOtherText			Interviewer.sessionRefreshOtherText
 POST	/interviewer/session/{<[0-9]+>id}/updateMyText				Interviewer.sessionUpdateMyText
 POST	/interviewer/session/{<[0-9]+>id}/updateMyComments			Interviewer.sessionUpdateMyComments
-
-
-
 
 GET		/interviewer/session/list				Interviewer.sessionList
 POST	/interviewer/session/create				Interviewer.sessionCreate
 
 
 
+
+
+# TEST
 #GET		/interviewer/test9.json					Interviewer.test3
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
@@ -28,4 +34,6 @@ GET     /public/                                staticDir:public
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
-*       /{controller}                  			{controller}.view
+*       /{controller}                  			{controller}.index
+
+
